@@ -2,14 +2,43 @@
 <html>
   <body>
     <script>
-      let emptiness = 0;
-      let deleteCount = 1;
-      function bruhThisB____Empty() {
-        emptiness += deleteCount;
+      let emptiness = 0; // this is how much empty you got
+      let deleteCount = 1; // this is how much empty gets added when you click the delete button
+      let deleteUpgradeCost = 10; // this is how much it costs to get upgrade the amount that the delete button deletes
+
+      function updateCounter() {
         document.getElementById("counter").innerHTML = "you got " + emptiness + " empty";
       }
+
+      function updateDeleteCost() {
+        document.getElementById("upgradeDeleteCount").innerHTML = "upgrade delete (cost: " + deleteUpgradeCost + " empty)";
+      }
+      function bruhThisB____Empty() {
+        emptiness += deleteCount;
+        updateCounter();
+      }
+
+      function upgradeDeleteCount() {
+        if(emptiness >= deleteUpgradeCost) {
+
+          deleteCount = deleteCount*2;
+
+          emptiness -= deleteUpgradeCost;
+
+          deleteUpgradeCost = deleteUpgradeCost*2;
+
+          updateCounter();
+          updateDeleteCost();
+          updateDeleteCount();
+        }
+      }
+
+      function updateDeleteCount() {
+        document.getElementById("deleteCount").innerHTML = "delete (" + deleteCount + ")";
+      }
     </script>
-    <p id="counter">you're full</p>
-    <button onclick="bruhThisB____Empty()">delete</button>
+    <p id="counter">you're fine</p>
+    <button id="deleteCount" onclick="bruhThisB____Empty()">delete (1)</button>
+    <button id="upgradeDeleteCount" onclick="upgradeDeleteCount()">upgrade delete (cost: 10 empty)</button>
   </body>
 </html>
