@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+    <script>
+      let emptiness = 0;
+      let deleteCount = 1;
+      function bruhThisB____Empty() {
+        emptiness += deleteCount;
+        document.getElementById("counter").innerHTML = "you got " + emptiness + " empty";
+      }
+    </script>
+    <p id="counter">you're full</p>
+    <button onclick="bruhThisB____Empty()">delete</button>
   </body>
 </html>
