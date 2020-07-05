@@ -1,44 +1,25 @@
-<!DOCTYPE html>
 <html>
+  <head>
+    <title>Void's personal website! Wowwwww</title>
+    <style>
+      body {
+        background-color: #F0F8FF;
+      }
+      h1 {
+        color: #5F9EA0;
+        text-align: center;
+
+      }
+    </style>
+  </head>
   <body>
-    <script>
-      let emptiness = 0; // this is how much empty you got
-      let deleteCount = 1; // this is how much empty gets added when you click the delete button
-      let deleteUpgradeCost = 10; // this is how much it costs to get upgrade the amount that the delete button deletes
-
-      function updateCounter() {
-        document.getElementById("counter").innerHTML = "you got " + emptiness + " empty";
-      }
-
-      function updateDeleteCost() {
-        document.getElementById("upgradeDeleteCount").innerHTML = "upgrade delete (cost: " + deleteUpgradeCost + " empty)";
-      }
-      function bruhThisB____Empty() {
-        emptiness += deleteCount;
-        updateCounter();
-      }
-
-      function upgradeDeleteCount() {
-        if(emptiness >= deleteUpgradeCost) {
-
-          deleteCount = deleteCount*2;
-
-          emptiness -= deleteUpgradeCost;
-
-          deleteUpgradeCost = deleteUpgradeCost*2;
-
-          updateCounter();
-          updateDeleteCost();
-          updateDeleteCount();
-        }
-      }
-
-      function updateDeleteCount() {
-        document.getElementById("deleteCount").innerHTML = "delete (" + deleteCount + ")";
-      }
-    </script>
-    <p id="counter">you're fine</p>
-    <button id="deleteCount" onclick="bruhThisB____Empty()">delete (1)</button>
-    <button id="upgradeDeleteCount" onclick="upgradeDeleteCount()">upgrade delete (cost: 10 empty)</button>
+    <h1>Welcome to my incredibly 90's-esque website!</h1>
+    <h2>Links:</h2>
+    <ul>
+      <li><a href="game">My game</a></li>
+      <li><a href="https://osu.ppy.sh/users/17584501">osu!</a></li>
+      <li><a href="https://www.youtube.com/channel/UCg0BeMFcrIJK9w5EE9P5KoA">Youtube</a></li>
+      <li><a href="https://discord.gg/vsY8Md4">Discord</a></li>
+    </ul>
   </body>
 </html>
