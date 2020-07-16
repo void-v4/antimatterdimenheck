@@ -6,7 +6,7 @@ let isAutodeleteBought = false; // this tells the game whether or not the autode
 
 function updateCounter() {
   document.getElementById("counter").innerHTML = "you got " + emptiness + " empty";
-  console.log("updated counter to " + emptiness "!");
+  console.log("updated counter to " + emptiness + "!");
 }
 
 function updateDeleteCost() {
