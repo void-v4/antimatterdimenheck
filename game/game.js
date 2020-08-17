@@ -37,6 +37,9 @@ function upgradeDeleteCount() {
 
 function updateDeleteCount() {
   document.getElementById("deleteCount").innerHTML = "delete (" + deleteCount + ")";
+  if(emptiness == Infinity) {
+    document.getElementById("deleteCount").innerHTML = "you win!";
+  }
 }
 
 // function autodelete() {
